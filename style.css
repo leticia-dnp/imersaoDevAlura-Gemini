@@ -1,0 +1,409 @@
+/* A fonte foi movida para o index.html para melhor performance */
+
+* {
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+:root {
+    --primary-color: #c681eb; /* Cor principal para títulos, botões e destaques de hover */
+    --secondary-color: #eecbff; /* Cor para textos secundários e tags nos cards */
+    --tertiary-color: #c195d7; /* Cor das bordas dos cards e linhas divisórias */
+    --bg-color: #650680da; /* Cor de fundo principal da página */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    background-color: var(--bg-color); /* Cor de fundo da página */
+    color: #CCCCCC; /* Cor padrão do texto no corpo da página */
+    font-family: "Inter", sans-serif; /* Fonte limpa para o corpo */
+    overflow-x: hidden; /* Evita barras de rolagem indesejadas */
+}
+
+header {
+    padding: 2rem 1rem; /* Espaçamento interno (2rem em cima/baixo, 1rem nos lados) */
+    display: flex; /* Habilita o layout flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
+    position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar a página */
+    top: 0; /* Posição do topo quando sticky */
+    background: rgba(0, 0, 0, 0.49); /* Fundo do cabeçalho */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo do cabeçalho */
+    z-index: 10; /* Define a ordem de empilhamento para ficar sobre outros elementos */
+    gap: 1rem; /* Espaçamento entre os elementos flex */
+}
+
+header h1 {
+    font-family: "Inter", sans-serif; 
+    font-size: 1.8rem; 
+    margin: 0; 
+    font-weight: 700; /* Deixa a fonte em negrito */
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+    text-align: center;
+    color: #dfb4ff; /* Cor do título principal, igual ao subtítulo */
+    animation: title-glow-in 1s ease-out forwards;
+    text-shadow: 0 0 10px rgba(223, 180, 255, 0.5); /* Efeito de brilho */
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600; /* Deixa a fonte em negrito */
+    color: #dfb4ff; /* Cor do subtítulo abaixo do título principal */
+    text-align: center;
+    max-width: 600px;
+    margin: 0.5rem 0 0 0;
+}
+
+@keyframes title-glow-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.search-container input {
+    background: transparent; /* Fundo da barra de pesquisa */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda da barra de pesquisa */
+    padding: 10px 16px;
+    border-radius: 10px;
+    width: 30rem; /* Largura do input */
+    color: #FFFFFF; /* Cor do texto digitado na barra de pesquisa */
+    font-family: "Inter", sans-serif;
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: transform 180ms, box-shadow 180ms, border-color 180ms;
+    box-shadow: none;
+}
+
+.search-container input::placeholder {
+    font-size: 1rem; /* Tamanho da fonte do placeholder */
+    font-weight: 300; /* Peso da fonte do placeholder */
+    color: rgba(255, 255, 255, 0.941); /* Cor do texto do placeholder */
+}
+
+.search-container input:hover {
+    border-color: #cfc3ffc3; /* Cor da borda da barra de pesquisa ao passar o mouse */
+    box-shadow: 0 2px 20px rgba(191, 139, 250, 0.56); /* Cor do brilho da barra de pesquisa ao passar o mouse */
+    transform: translateY(-2px); /* Animação de subida */
+}
+
+.search-container input:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-color: var(--primary-color); /* Cor da borda da barra de pesquisa quando selecionada */
+    box-shadow: 0 0 20px rgba(146, 18, 155, 0.5); /* Cor do brilho da barra de pesquisa quando selecionada */
+    transform: translateY(-2px);
+}
+
+#botao-busca {
+    /* Ícone de lupa em SVG */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23c681eb' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E"); /* Cor do ícone da lupa (var(--primary-color)) */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Cor da borda do botão da lupa */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    background-color: transparent; /* Fundo do botão da lupa */
+    color: #FFFFFF; /* Cor do texto (se houvesse) no botão da lupa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+}
+
+#botao-busca:hover {
+    transform: translateY(-2px); /* Leve animação de subida */
+    box-shadow: 0 2px 20px rgba(167, 139, 250, 0.56); /* Cor do brilho do botão da lupa ao passar o mouse */
+}
+
+.btn-lista-completa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    padding: 0 1rem; /* Espaçamento interno para o texto */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color); /* Cor de fundo do botão 'Lista de IAs' */
+    color: #FFFFFF; /* Cor do texto do botão 'Lista de IAs' */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(104, 0, 111, 0.5); /* Cor do brilho do botão 'Lista de IAs' */
+}
+
+.btn-lista-completa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 20px rgba(167, 139, 250, 0.56); /* Cor do brilho do botão 'Lista de IAs' ao passar o mouse */
+}
+
+#botao-busca:active {
+    transform: scale(0.98); /* Efeito de clique (diminui o tamanho) */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.49); /* Cor de fundo dos cards */
+    border: 1px solid var(--tertiary-color); /* Cor da borda dos cards */
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centraliza o texto para os elementos filhos */
+    gap: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: none;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--primary-color); /* Cor da borda do card ao passar o mouse */
+    box-shadow: 0 8px 30px rgb(195, 100, 227); /* Cor do brilho do card ao passar o mouse */
+}
+
+.card-image {
+    width: 40px; /* Diminui o tamanho da imagem */
+    height: 40px;
+    object-fit: contain;
+    margin-right: 1rem; /* Adiciona espaço entre a imagem e o título */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conjunto imagem + título */
+    width: 100%;
+}
+
+@keyframes float-glow {
+    0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.4)); /* Cor do brilho da animação 'float-glow' */
+    }
+    50% {
+        transform: translateY(-8px);
+        filter: drop-shadow(0 10px 15px rgba(167, 139, 250, 0.737)); /* Cor do brilho da animação 'float-glow' no pico */
+    }
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    color: var(--primary-color); /* Cor do título dentro do card */
+    margin: 0;
+    text-align: left; /* Alinha o título à esquerda, ao lado da imagem */
+}
+
+.card p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    text-align: left; /* Alinha a descrição à esquerda para melhor legibilidade */
+}
+
+.card .card-description {
+    flex-grow: 1; /* Faz a descrição ocupar o espaço vertical disponível */
+    margin-bottom: 1rem; /* Adiciona espaço antes do próximo elemento */
+}
+
+.card p strong {
+    color: var(--secondary-color); /* Cor do texto em negrito dentro da descrição do card */
+    font-weight: 600;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--tertiary-color); /* Cor da linha divisória acima das tags de custo */
+    margin-top: auto; /* Empurra este bloco para o final do card */
+}
+
+.card-info-name {
+    font-weight: 600;
+    color: var(--secondary-color); /* Cor do texto de 'titulo_acao' no card */
+    font-size: 0.9rem;
+}
+
+.card-info-cost {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+}
+
+.card-info-cost.free {
+    background-color: rgba(52, 211, 153, 0.1); /* Cor de fundo da tag 'Gratuito' */
+    color: #34d399; /* Cor do texto da tag 'Gratuito' */
+    border: 1px solid #34d399; /* Cor da borda da tag 'Gratuito' */
+}
+
+.card-info-cost.paid {
+    background-color: rgba(202, 74, 74, 0.311); /* Cor de fundo da tag 'Pago' */
+    color: #d13535; 
+    border: 1px solid #c37b7b; /* Cor da borda da tag 'Pago' */
+}
+
+.card a {
+    background-color: var(--primary-color); /* Cor de fundo do botão 'Acessar' no card */
+    color: #FFFFFF; /* Cor do texto do botão 'Acessar' (branco) */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.5rem; /* Espaço acima do botão */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card a:hover {
+    background-color: #c3b5fd; /* Cor de fundo do botão 'Acessar' ao passar o mouse */
+    transform: scale(1.05);
+}
+
+.card .card-tags {
+    font-size: 0.8rem;
+    color: #b0b0b0; /* Cor do texto das tags no card */
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    header { 
+        padding: 1rem; /* Reduz o espaçamento interno */
+    }
+
+    header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
+        font-size: 1.5rem;
+    }
+
+    .search-container input { /* Estilos para o input em telas menores */
+        width: 90vw; /* Largura baseada na largura da viewport */
+        max-width: 500px;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
+        font-size: 1.2rem;
+        white-space: normal;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+p.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: var(--tertiary-color); /* Cor do texto 'Nenhum resultado encontrado' */
+}
+
+#lista-de-ias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaçamento entre os botões */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem;
+}
+
+.ia-button {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(84, 24, 99, 0.427); /* Cor de fundo dos itens na página de lista */
+    border: 1px solid var(--tertiary-color); /* Cor da borda dos itens na página de lista */
+    border-radius: 10px;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--secondary-color); /* Cor de texto padrão para os itens da lista */
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ia-button:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color); /* Cor da borda do item da lista ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(104, 0, 111, 0.4); /* Cor do brilho do item da lista ao passar o mouse */
+}
+
+.ia-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0); /* Cor de fundo para os ícones na página de lista */
+}
+
+.ia-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.ia-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e5e3e7; /* Cor do nome da IA na página de lista */
+}
+
+.ia-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #A8A8B3; /* Cor da descrição da IA na página de lista */
+    line-height: 1.5;
+}
+
+.ia-access-tag {
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.086); /* Cor de fundo da tag de acesso (ex: 'Freemium') */
+    color: #c7c7d1; /* Cor do texto da tag de acesso */
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Ajuste para centralizar o conteúdo na página de lista */
+body:has(#lista-de-ias) main {
+    display: block;
+    padding: 2rem 0;
+}
+}

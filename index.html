@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conhecimento - IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cor do título, subtítulo e fundo do botão "Lista de IAs" */
+        h1, .subtitle, .btn-lista-completa {
+            color: #b943f4; /* Cor do contorno */
+        }
+
+        .btn-lista-completa {
+            background-color: #b943f4; 
+            color: #FFFFFF; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DataSense AI</h1>
+        <p class="subtitle">Plataforma que conecta você às melhores ferramentas de inteligência artificial para estudos e projetos</p>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="search" id="searchInput" placeholder="Pesquise por nome, tag ou palavra-chave">
+                <button id="botao-busca" aria-label="Buscar"></button>
+                <a href="lista-ias.html" class="btn-lista-completa">Lista de IAs</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="cards-container"></main>
+
+    <script src="script.js"></script>
+</body>
+</html>

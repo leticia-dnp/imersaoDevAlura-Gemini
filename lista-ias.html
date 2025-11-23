@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Completa de IAs - DataSense AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Estilos para a animação de entrada dos subtítulos -->
+    <style>
+        .subtitle {
+            animation: fade-in-up 0.8s ease-out forwards;
+            opacity: 0; /* Começa invisível */
+        }
+
+        /* Animação para o segundo subtítulo, com um pequeno atraso */
+        .subtitle:nth-of-type(2) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ajusta a cor do título e subtítulos para o tom do contorno */
+        h1, h1 a, .subtitle {
+            color: #b943f4 !important; 
+            text-decoration: none; /* Remove o sublinhado do link do título */
+        }
+
+        /* Estilos para padronizar o tamanho dos ícones */
+        #lista-de-ias img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+            display: block; /* Ajuda na centralização e alinhamento */
+            margin: 0 auto; /* Centraliza a imagem se o contêiner for maior */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" class="header-link">DataSense AI</a></h1>
+        <p class="subtitle">Explore as mentes digitais mais poderosas da atualidade!</p> 
+        <p class="subtitle">IAs que geram, inspiram e simplificam soluções inteligentes.</p>
+    </header>
+
+    <main>
+        <div id="lista-de-ias"></div>
+    </main>
+
+    <script src="lista.js"></script>
+</body>
+</html>

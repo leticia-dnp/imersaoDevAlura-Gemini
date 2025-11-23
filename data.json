@@ -1,0 +1,197 @@
+[
+  {
+    "nome": "Aprendizado de Máquina (Machine Learning)",
+    "imagem": "https://www.vhv.rs/dpng/d/208-2081341_scikit-learn-logo-png-transparent-png.png",
+    "titulo_acao": "Aprende com dados para fazer previsões.",
+    "data_criacao": "1959",
+    "sobre": "Aprendizado de Máquina (Machine Learning): Campo da IA que foca em algoritmos que aprendem com dados. Scikit-learn é uma biblioteca fundamental em Python que oferece ferramentas simples e eficientes para análise preditiva de dados.",
+    "acesse_aqui": "https://scikit-learn.org/",
+    "pago": false,
+    "tags": [
+      "IA",
+      "Algoritmos",
+      "Dados",
+      "Predição",
+      "Machine Learning"
+    ]
+  },
+  {
+    "nome": "Aprendizado Supervisionado",
+    "imagem": "https://www.svgrepo.com/show/354440/tensorflow.svg",
+    "titulo_acao": "Aprende com exemplos rotulados.",
+    "data_criacao": "1960s",
+    "sobre": "Aprendizado Supervisionado: Técnica de ML onde o modelo aprende com dados rotulados. O TensorFlow Playground é uma ferramenta interativa que permite visualizar e entender como redes neurais são treinadas para tarefas de classificação.",
+    "acesse_aqui": "https://playground.tensorflow.org/",
+    "pago": false,
+    "tags": [
+      "Machine Learning",
+      "Classificação",
+      "Regressão",
+      "Dados"
+    ]
+  },
+  {
+    "nome": "Aprendizado Não Supervisionado",
+    "imagem": "https://tse3.mm.bing.net/th/id/OIP.QDNI4zhCuG-OkGyieCN97QAAAA?pid=Api&P=0&h=180",
+    "titulo_acao": "Encontra padrões em dados não rotulados.",
+    "data_criacao": "1970s",
+    "sobre": "Aprendizado Não Supervisionado: Técnica de ML para encontrar padrões em dados não rotulados. O Amazon SageMaker é uma plataforma completa que oferece algoritmos como K-Means para realizar clusterização e análise de dados.",
+    "acesse_aqui": "https://aws.amazon.com/pt/sagemaker/",
+    "pago": true,
+    "tags": [
+      "Machine Learning",
+      "Clusterização",
+      "Dados",
+      "Cloud"
+    ]
+  },
+  {
+    "nome": "Aprendizado por Reforço (Reinforcement Learning)",
+    "imagem": "https://appilux.io/wp-content/uploads/2019/08/OPENAIGYM.png",
+    "titulo_acao": "Aprende por tentativa e erro com recompensas.",
+    "data_criacao": "1980s",
+    "sobre": "Aprendizado por Reforço (Reinforcement Learning): Área de ML onde um agente aprende por tentativa e erro. A biblioteca Gymnasium (da OpenAI) é um padrão para desenvolver e comparar algoritmos de aprendizado por reforço em diversos ambientes.",
+    "acesse_aqui": "https://gymnasium.farama.org/",
+    "pago": false,
+    "tags": [
+      "Machine Learning",
+      "Agente",
+      "Recompensa",
+      "Automação"
+    ]
+  },
+  {
+    "nome": "Redes Neurais Artificiais (Artificial Neural Networks)",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+    "titulo_acao": "Simula o cérebro para reconhecer padrões.",
+    "data_criacao": "1943",
+    "sobre": "Redes Neurais Artificiais (Artificial Neural Networks): Modelos computacionais inspirados no cérebro humano. O TensorFlow é uma biblioteca de código aberto criada pelo Google para construir e treinar redes neurais para uma variedade de tarefas.",
+    "acesse_aqui": "https://www.tensorflow.org/",
+    "pago": false,
+    "tags": [
+      "IA",
+      "Deep Learning",
+      "Neurônios",
+      "Machine Learning"
+    ]
+  },
+  {
+    "nome": "Aprendizado Profundo (Deep Learning)",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+    "titulo_acao": "Usa redes neurais profundas para tarefas complexas.",
+    "data_criacao": "2006",
+    "sobre": "Aprendizado Profundo (Deep Learning): Subcampo de ML que usa redes neurais profundas. O PyTorch, desenvolvido pelo Facebook, é um framework popular conhecido por sua flexibilidade e facilidade de uso na criação de modelos de Deep Learning.",
+    "acesse_aqui": "https://pytorch.org/",
+    "pago": false,
+    "tags": [
+      "Machine Learning",
+      "Redes Neurais",
+      "Dados",
+      "Deep Learning"
+    ]
+  },
+  {
+    "nome": "Processamento de Linguagem Natural (PLN)",
+    "imagem": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "titulo_acao": "Entende e processa a linguagem humana.",
+    "data_criacao": "1950",
+    "sobre": "Processamento de Linguagem Natural (PLN): Área da IA focada em capacitar computadores a entender a linguagem humana. A biblioteca Transformers da Hugging Face fornece acesso a milhares de modelos pré-treinados para tarefas de PLN.",
+    "acesse_aqui": "https://huggingface.co/docs/transformers/index",
+    "pago": false,
+    "tags": [
+      "IA",
+      "Linguagem",
+      "Texto",
+      "PLN"
+    ]
+  },
+  {
+    "nome": "Visão Computacional (Computer Vision)",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
+    "titulo_acao": "Interpreta e analisa informações visuais.",
+    "data_criacao": "1960s",
+    "sobre": "Visão Computacional (Computer Vision): Campo da IA que ensina computadores a 'ver' e interpretar o mundo visual. OpenCV é a biblioteca de código aberto mais popular para processamento de imagens e vídeos em tempo real.",
+    "acesse_aqui": "https://opencv.org/",
+    "pago": false,
+    "tags": [
+      "IA",
+      "Imagens",
+      "Vídeos",
+      "Visão Computacional"
+    ]
+  },
+  {
+    "nome": "IA Generativa (Generative AI)",
+    "imagem": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png",
+    "titulo_acao": "Cria novos conteúdos como textos e imagens.",
+    "data_criacao": "2014",
+    "sobre": "IA Generativa (Generative AI): IA capaz de criar novos conteúdos como texto, imagens e código. O Google Gemini é um modelo de linguagem multimodal de ponta, capaz de entender e gerar informações a partir de texto, imagens e áudio.",
+    "acesse_aqui": "https://gemini.google.com/",
+    "pago": true,
+    "tags": [
+      "IA",
+      "IA Generativa",
+      "Deep Learning",
+      "PLN"
+    ]
+  },
+  {
+    "nome": "Grandes Modelos de Linguagem (LLM)",
+    "imagem": "https://freelogopng.com/images/all_img/1681039084chatgpt-icon.png",
+    "titulo_acao": "Processa e gera linguagem em larga escala.",
+    "data_criacao": "2018",
+    "sobre": "Grandes Modelos de Linguagem (LLM): Modelos de Deep Learning massivos treinados com texto. O ChatGPT da OpenAI é o exemplo mais famoso, demonstrando uma capacidade impressionante de dialogar, escrever e raciocinar.",
+    "acesse_aqui": "https://chat.openai.com/",
+    "pago": true,
+    "tags": [
+      "PLN",
+      "IA Generativa",
+      "Deep Learning",
+      "Linguagem"
+    ]
+  },
+  {
+    "nome": "Sistemas Especialistas (Expert Systems)",
+    "imagem": "https://static.vecteezy.com/system/resources/previews/021/217/819/original/artificial-intelligence-head-icon-ai-icon-design-used-in-ai-concepts-artificial-intelligence-icon-free-vector.jpg",
+    "titulo_acao": "Emula a tomada de decisão de um especialista.",
+    "data_criacao": "1970s",
+    "sobre": "Sistemas Especialistas (Expert Systems): IA baseada em regras que emula um especialista humano. O Drools é um sistema de gerenciamento de regras de negócios (BRMS) que permite criar sistemas de decisão complexos baseados em lógica.",
+    "acesse_aqui": "https://www.drools.org/",
+    "pago": false,
+    "tags": [
+      "IA Simbólica",
+      "Regras",
+      "Automação"
+    ]
+  },
+  {
+    "nome": "Robótica Autônoma",
+    "imagem": "https://developer.download.nvidia.com/images/isaac/logo-ros.jpg",
+    "titulo_acao": "Cria robôs que operam de forma independente.",
+    "data_criacao": "1960s",
+    "sobre": "Robótica Autônoma: Área que integra IA e engenharia para criar robôs autônomos. O ROS (Robot Operating System) é um framework flexível para escrever software de robôs, sendo um padrão na indústria e pesquisa.",
+    "acesse_aqui": "https://www.ros.org/",
+    "pago": false,
+    "tags": [
+      "IA",
+      "Engenharia",
+      "Hardware",
+      "Robótica"
+    ]
+  },
+  {
+    "nome": "Inteligência Artificial Geral (AGI)",
+    "imagem": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepmind-color.png",
+    "titulo_acao": "Busca criar uma IA com cognição humana.",
+    "data_criacao": "1997",
+    "sobre": "Inteligência Artificial Geral (AGI): Conceito de uma IA com capacidade cognitiva humana. A DeepMind, laboratório de IA do Google, tem como missão principal a pesquisa e o desenvolvimento em direção à AGI.",
+    "acesse_aqui": "https://deepmind.google/",
+    "pago": false,
+    "tags": [
+      "AGI",
+      "Teoria",
+      "Pesquisa",
+      "IA"
+    ]
+  }
+]
